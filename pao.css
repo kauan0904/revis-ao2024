@@ -1,0 +1,239 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #d2691e; /* Cor de fundo */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 36px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f8b739;
+}
+
+/* Seção Home */
+.home {
+    position: relative;
+    height: 80vh;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-text .btn {
+    background-color: #f8b739;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-text .btn:hover {
+    background-color: #f1a540;
+}
+
+/* Seção Cardápio */
+.cardapio {
+    padding: 60px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.cardapio h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.produto {
+    margin-top: 55px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 1px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.produto img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.produto h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.produto p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.produto .preco {
+    font-size: 22px;
+    font-weight: 600;
+    color: #d2691e;
+}
+
+/* Seção Sobre Nós */
+.sobre {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.sobre p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+}
+
+/* Seção Contato */
+.contato {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Rodapé */
+footer {
+    background-color: #d2691e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 32px;
+    }
+
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .produto {
+        margin-bottom: 30px;
+    }
+}
